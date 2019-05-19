@@ -1,0 +1,20 @@
+{
+  "name": "curso_webpack",
+  "version": "1.0.0",
+  "description": "This is a course vert funny",
+  "main": "index.js",
+  "author": "Juan Bedoya",
+  "license": "MIT",
+  "scripts": {
+    "build": "webpack src/index.js --output build/bundle.js -d",
+    "build:local": "webpack",
+    "build:external": "webpack --config ./external/webpack.config.js",
+    "build:css": "webpack --config ./css_style_loader/webpack.config.js"
+  },
+  "devDependencies": {
+    "css-loader": "^2.1.1",
+    "style-loader": "^0.23.1",
+    "webpack": "^4.31.0",
+    "webpack-cli": "^3.3.2"
+  }
+}
