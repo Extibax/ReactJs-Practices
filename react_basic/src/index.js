@@ -1,17 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
-import "./index.css";
-import App from "./App";
+import "./styles/index.css";
 import * as serviceWorker from "./serviceWorker";
+import FirstComponent from "./components/Aplication";
 
-/* React sin JSX */
-
-const title = React.createElement(
-  "h1",
-  { id: "title", className: "header" },
-  "Hello World"
-);
-
-ReactDOM.render(<App />, document.getElementById("root"));
+ReactDOM.render( <FirstComponent />, document.getElementById("root"));
 
 serviceWorker.unregister();
