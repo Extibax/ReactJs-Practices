@@ -1,0 +1,26 @@
+[
+    {
+        "type": "Group",
+        "name": "eprezto",
+        "parent_id": null,
+        "workspaceRoot": null,
+        "workspacePath": null,
+        "id": "XcKJIaApoNvLesyd"
+    },
+    {
+        "type": "File",
+        "name": "/home/extibax/Desktop/eprezto/src/containers/App/commonStyle.js",
+        "parent_id": "XcKJIaApoNvLesyd",
+        "workspaceRoot": "/home/extibax/Desktop/eprezto",
+        "workspacePath": "src/containers/App/commonStyle.js",
+        "id": "hD9pYevtbZzGgc2P"
+    },
+    {
+        "type": "File",
+        "name": "/home/extibax/Desktop/eprezto/src/containers/App/App.js",
+        "parent_id": "XcKJIaApoNvLesyd",
+        "workspaceRoot": "/home/extibax/Desktop/eprezto",
+        "workspacePath": "src/containers/App/App.js",
+        "id": "gFCBOTbwuVQyAqXh"
+    }
+]
