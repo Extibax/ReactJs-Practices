@@ -1,0 +1,13 @@
+/* Modules */
+import React from "react";
+
+/* Styles */
+/* import "../styles/"; */
+
+const Header = props => (
+  <header>
+    <h1>{props.title}</h1>
+  </header>
+);
+
+export default Header;
