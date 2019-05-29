@@ -5,7 +5,7 @@ import React from "react";
 import { EventsConsumer } from "../context/EventsContext";
 
 /* Components */
-import Event from "../components/Event";
+import Event from "./Event";
 
 const ListEvents = () => {
   return (
