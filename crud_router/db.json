@@ -1,0 +1,16 @@
+{
+  "restaurant": [
+    {
+      "priceSaucer": "200",
+      "nameSaucer": "Cheesecake",
+      "category": "desserts",
+      "id": 1
+    },
+    {
+      "priceSaucer": "300",
+      "nameSaucer": "Rib Eye 400",
+      "category": "cortes",
+      "id": 2
+    }
+  ]
+}
