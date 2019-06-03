@@ -11,6 +11,18 @@ import AddProduct from "./components/AddProduct";
 import EditProduct from "./components/EditProduct";
 
 function App() {
+
+  const [ products, setProducts ] = useState([]);
+
+  useEffect(() => {
+    const queryApi = async () => {
+      /* Consultar la API de JSON-SERVER */
+      const result = await axios.get('http://localhost:4000/restaurant');
+      console.log(result);
+    }
+    queryApi();
+  }, []);
+  
   return (
     <Router>
       <Header />
