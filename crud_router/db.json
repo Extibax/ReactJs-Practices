@@ -1,14 +1,14 @@
 {
   "restaurant": [
     {
-      "priceSaucer": "200",
       "nameSaucer": "Cheesecake",
-      "category": "desserts",
+      "priceSaucer": "200",
+      "category": "postre",
       "id": 1
     },
     {
-      "priceSaucer": "300",
       "nameSaucer": "Rib Eye 400",
+      "priceSaucer": "301",
       "category": "cortes",
       "id": 2
     },
@@ -25,9 +25,9 @@
       "id": 4
     },
     {
-      "nameSaucer": "Pastel de Zanahoria",
-      "priceSaucer": "80",
-      "category": "postre",
+      "nameSaucer": "Ensalada de Pollo",
+      "priceSaucer": "2000",
+      "category": "ensalada",
       "id": 5
     }
   ]

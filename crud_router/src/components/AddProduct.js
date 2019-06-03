@@ -7,7 +7,7 @@ import Swal from "sweetalert2";
 /* Components */
 import Error from "./Error";
 
-const AddProduct = ({ history }) => {
+const AddProduct = ({ history, setReloadProducts }) => {
   /* State */
   const [nameSaucer, setNameSaucer] = useState("");
   const [priceSaucer, setPriceSaucer] = useState("");
@@ -53,6 +53,7 @@ const AddProduct = ({ history }) => {
     }
 
     /* Redirigir al usuario a productos */
+    setReloadProducts(true);
     history.push("/products");
   };
 

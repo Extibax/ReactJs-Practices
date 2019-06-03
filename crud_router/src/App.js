@@ -6,21 +6,26 @@ import axios from "axios";
 /* Components */
 import Header from "./components/Header";
 import Products from "./components/Products";
-import Product from "./components/Product";
 import AddProduct from "./components/AddProduct";
 import EditProduct from "./components/EditProduct";
 
 function App() {
   const [products, setProducts] = useState([]);
+  const [reloadProducts, setReloadProducts] = useState(true);
 
   useEffect(() => {
-    const queryApi = async () => {
-      /* Consultar la API de JSON-SERVER */
-      const result = await axios.get("http://localhost:4000/restaurant");
-      setProducts(result.data);
-    };
-    queryApi();
-  }, []);
+    if (reloadProducts) {
+      const queryApi = async () => {
+        /* Consultar la API de JSON-SERVER */
+        const result = await axios.get("http://localhost:4000/restaurant");
+        setProducts(result.data);
+      };
+      queryApi();
+
+      /* Cambiar a false la recarga de los productos */
+      setReloadProducts(false);
+    }
+  }, [reloadProducts]);
 
   return (
     <Router>
@@ -31,12 +36,40 @@ function App() {
             exact
             path="/products"
             render={() => {
-              return <Products products={products} />;
+              return (
+                <Products
+                  products={products}
+                  setReloadProducts={setReloadProducts}
+                />
+              );
             }}
           />
-          <Route exact path="/products/new" component={AddProduct} />
-          <Route exact path="/products/:id" component={Product} />
-          <Route exact path="/products/edit/:id" component={EditProduct} />
+          <Route
+            exact
+            path="/products/new"
+            render={() => {
+              return <AddProduct setReloadProducts={setReloadProducts} />;
+            }}
+          />
+          <Route
+            exact
+            path="/products/edit/:id"
+            render={props => {
+              /* Tomar el ID del producto */
+              const idProduct = parseInt(props.match.params.id);
+
+              /* El producto que se pasa al state */
+              const product = products.filter(
+                product => product.id === idProduct
+              );
+              return (
+                <EditProduct
+                  product={product[0]}
+                  setReloadProducts={setReloadProducts}
+                />
+              );
+            }}
+          />
         </Switch>
         <p className="mt-4 p2 text-center">Todos los derechos reservados</p>
       </main>
