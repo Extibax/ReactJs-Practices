@@ -11,24 +11,29 @@ import AddProduct from "./components/AddProduct";
 import EditProduct from "./components/EditProduct";
 
 function App() {
-
-  const [ products, setProducts ] = useState([]);
+  const [products, setProducts] = useState([]);
 
   useEffect(() => {
     const queryApi = async () => {
       /* Consultar la API de JSON-SERVER */
-      const result = await axios.get('http://localhost:4000/restaurant');
-      console.log(result);
-    }
+      const result = await axios.get("http://localhost:4000/restaurant");
+      setProducts(result.data);
+    };
     queryApi();
   }, []);
-  
+
   return (
     <Router>
       <Header />
       <main className="container mt-5">
         <Switch>
-          <Route exact path="/products" component={Products} />
+          <Route
+            exact
+            path="/products"
+            render={() => {
+              return <Products products={products} />;
+            }}
+          />
           <Route exact path="/products/new" component={AddProduct} />
           <Route exact path="/products/:id" component={Product} />
           <Route exact path="/products/edit/:id" component={EditProduct} />

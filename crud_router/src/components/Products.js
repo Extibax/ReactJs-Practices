@@ -1,12 +1,21 @@
 /* Modules */
-import React from 'react'
+import React from "react";
+import Product from "./Product";
 
-const Products = () => {
+/* Component */
+import List from "./List";
+
+const Products = ({ products }) => {
   return (
-    <h1 className="text-center">
-      Products
-    </h1>
+    <React.Fragment>
+      <h1 className="text-center">Products</h1>
+      <ul className="list-group mt-5">
+        {products.map(product => {
+          return <List key={product.id} product={product} />;
+        })}
+      </ul>
+    </React.Fragment>
   );
-}
- 
+};
+
 export default Products;

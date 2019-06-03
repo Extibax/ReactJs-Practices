@@ -11,6 +11,24 @@
       "nameSaucer": "Rib Eye 400",
       "category": "cortes",
       "id": 2
+    },
+    {
+      "nameSaucer": "Ensalada Primavera",
+      "priceSaucer": "100",
+      "category": "ensalada",
+      "id": 3
+    },
+    {
+      "nameSaucer": "Agua de Frutas",
+      "priceSaucer": "80",
+      "category": "postre",
+      "id": 4
+    },
+    {
+      "nameSaucer": "Pastel de Zanahoria",
+      "priceSaucer": "80",
+      "category": "postre",
+      "id": 5
     }
   ]
 }
